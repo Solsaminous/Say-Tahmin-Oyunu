@@ -1,4 +1,3 @@
-from pickletools import int4
 import random
 import time
 
@@ -11,7 +10,7 @@ Sayı Tahmin Oyunu
 **************************************************""")
 
 rastgele_sayı = random.randint(1,40)
-tahin_hakkı = 7
+tahim_hakkı = 7
 while True:
 
     tahmin = int(input("Tahmininiz: "))
@@ -20,19 +19,19 @@ while True:
         print("Bilgiler sorgulanıyor...")
         time.sleep(1)
         print("Daha yüksek bir sayı söyleyiniz.")
-        tahin_hakkı -= 1
+        tahmin_hakkı -= 1
 
     elif (tahmin > rastgele_sayı):
         print("Bilgiler sorgulanıyor...")
         time.sleep(1)
         print("Daha düşük bir sayı söyleyiniz.")
-        tahin_hakkı -= 1
+        tahmin_hakkı -= 1
     else:
         print("Bilgiler sorgulanıyor...")
         time.sleep(1)
         print("Tebrikler! sayımız: ",rastgele_sayı)
         break
-    if (tahin_hakkı == 0 ):
+    if (tahmin_hakkı == 0 ):
         print("Tahmin hakkınız bitti...")
         print("Sayımız: ",rastgele_sayı)
         break
